@@ -8,58 +8,97 @@
 </head>
 <body>
     <header>
-        <div id="csarContainer">
-            <img id="csarImg" src="img/csar.png" alt="">
-        </div>
-        <ul>
-            <li>about</li>
-            <li>book</li>
-            <li>portfolio</li>
-            <li>blog</li>
-            <li>contact</li>
-        </ul>
-        <div>
-            <ul>
-                <li><img class="icon" src="icons/Twitter.svg" alt="twitter icon"></li>
-                <li><img class="icon" src="icons/LinkedIn2.png" alt="linkedin icon"></li>
-                <li><img class="icon" src="icons/Twitch.png" alt="twitch icon"></li>
-                <li><img class="icon" src="icons/Instagram.png" alt="isntagram icon"></li>
-            </ul>
-        </div>
-    </header>
-    <section class="mainHero">
-        <div class="heroInfo">
-            <img id="csarHero" src="img/csar.png" alt="csar Image">
-            <div>
-                <h1 class="heroText">
-                    Que dice pichon!
-                </h1>
-                <h4 class="heroText">Aqui el maquina de los maquinas, la humildad en persona!!</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex, perspiciatis praesentium voluptates nesciunt nisi nam vel, alias sint facere sed!</p>
+        <nav>
+            <div id="csarContainer">
+                <img id="csarImg" src="img/csar.png" alt="">
             </div>
-           
+            <div class="links">
+                <ul class="sectionsRef">
+                    <li>about</li>
+                    <li><a href="#work">work</a></li>
+                    <li>portfolio</li>
+                    <li>blog</li>
+                    <li>contact</li>
+                </ul>
+            </div>
+            <div class="iconContainer">
+                <ul>
+                    <li><img class="icon" src="icons/github.png" alt="twitter icon"></li>
+                    <li><img class="icon" src="icons/LinkedIn2.png" alt="linkedin icon"></li>
+                    <li><img class="icon" src="icons/Twitch.png" alt="twitch icon"></li>
+                    <li><img class="icon" src="icons/Instagram.png" alt="isntagram icon"></li>
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+    <section class="mainHero" id="about">
+        <div class="heroInfo">
+            <div class="textContainer">
+                <h1 class="heroText">
+                    Junior FrontEnd developer
+                </h1>
+                <div>
+                    <p class="heroText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex, perspiciatis praesentium voluptates nesciunt nisi nam vel, alias sint facere sed!</p>
+                    <p class="heroText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex, perspiciatis praesentium voluptates nesciunt nisi nam vel, alias sint facere sed!</p>
+                </div>
+            </div>
+            <div class="webada">
+                <img id="csarHero" src="img/csar.png" alt="csar Image">
+            </div>
         </div>
         
     </section>
 
-    <div class="workSpace">
+    <section class="workSpace" id="work">
         <hr>
         <h3>Some of my lastest work</h3>
         <hr>
-    </div>
-    <section class="cardContainer">
-        <div class="card card1">
-            <h3>Baldur's Gate 3</h3>
-            <h5>Game lead dev</h5>
-        </div>
-        <div class="card card2">
-
-            <h3>Elden ring</h3>
-            <h5>Game lead dev</h5>
-        </div>
-        <div class="card card3">
-            <h3>It takes two</h3>
-            <h5>Game lead dev</h5>
+    </section>
+    <section id="slider">
+        <div class="imgSlider">
+            <div class="slide active">
+                <img src="img/1.jpeg" alt="">
+                <div class="sliderInfo">
+                    <h2>Slide 01</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi corrupti impedit facere quasi temporibus veniam inventore accusamus, debitis doloribus itaque incidunt perspiciatis nam accusantium necessitatibus placeat eaque amet repudiandae?</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/mainhero.webp" alt="">
+                <div class="sliderInfo">
+                    <h2>Slide 02</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi corrupti impedit facere quasi temporibus veniam inventore accusamus, debitis doloribus itaque incidunt perspiciatis nam accusantium necessitatibus placeat eaque amet repudiandae?</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/3.jpg" alt="">
+                <div class="sliderInfo">
+                    <h2>Slide 03</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi corrupti impedit facere quasi temporibus veniam inventore accusamus, debitis doloribus itaque incidunt perspiciatis nam accusantium necessitatibus placeat eaque amet repudiandae?</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/4.jpg" alt="">
+                <div class="sliderInfo">
+                    <h2>Slide 04</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi corrupti impedit facere quasi temporibus veniam inventore accusamus, debitis doloribus itaque incidunt perspiciatis nam accusantium necessitatibus placeat eaque amet repudiandae?</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/5.jpg" alt="">
+                <div class="sliderInfo">
+                    <h2>Slide 05</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi corrupti impedit facere quasi temporibus veniam inventore accusamus, debitis doloribus itaque incidunt perspiciatis nam accusantium necessitatibus placeat eaque amet repudiandae?</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
         </div>
     </section>
     <footer>
@@ -75,5 +114,6 @@
             <li>content</li>
         </ul>
     </footer>
-</body>
+    <script src="script.js"></script>
+</body> 
 </html>

@@ -1,18 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Madimi One', sans-serif;
+    scroll-behavior: smooth;
+
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*#region Header */
 header{
     background-color: black;
     color: white;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
-
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.links{
+    display: flex;
+    align-items: flex-end;
+    width: 60%;
+}
+.sectionsRef{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
 #csarImg{
     background-color: #FFF;
     border-radius: 50%;
@@ -23,51 +44,51 @@ header{
 #csarImg:hover{
     transform: rotate(360deg);
 }
-
-
 ul{
     list-style: none;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    font-size: 20px;
-    gap: 25%;
+    justify-content: space-around;
+    font-size: 1rem;
 }
 li:hover{
     cursor: pointer;
     color: aqua;
 }
+.iconContainer{
+    width: 20%;
+}
 .icon{
-    width: 35px;
+    width: 1.8rem;
 }
 .icon:hover{
-    scale: 1.2;
-    filter: drop-shadow(3px 2px 1px aqua);
+    filter: drop-shadow(1px 0 3px aqua);
 }
-
+/*#endregion */
+/*#region Hero */
 .mainHero{
-    background-image: url('img/mainhero.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height:55vh;
-    box-shadow: 0 0 10px 0 #000000;
+    width: 100%;
+    height: 90vh;
+    background-color: #000;
     color: #FFF;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
     
-}
-.mainHero:hover{
-    scale: 0.999;
-    box-shadow: 0 0 20px 0 aqua;
 }
 .heroInfo{
     display: flex;
     flex-direction: column;
     border-radius: 10px 0;
-    padding: 2rem;
-    width: 30%;
+    width: 50%;
 
+}
+.webada{
+    background-color: #FFF;
+    width: 90vw;
+    height: 55vh;
+    border-radius: 0 226px 226px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 #csarHero{
@@ -78,14 +99,17 @@ li:hover{
     filter: drop-shadow(5px 2px 10px #08b6fb);
     align-self: flex-end;
 }
-.heroInfo>div{
-    border-radius: 4%;
-    background-color: #000000;
+.textContainer{
     padding: 5%;
+    display: flex;
+    flex-direction: column;    
 }
-.heroText{
-    margin-bottom: 1.1rem;
+.textContainer>div{
+    display: flex;
+    flex-direction: row;
 }
+/*#endregion*/
+/*#region Slider */
 .workSpace{
     display: flex;
     flex-direction: row;
@@ -103,44 +127,81 @@ hr{
     border: none;
 }
 
-.cardContainer{
+#slider{
+    width: 100%;
+    height: 80vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 2%;
+    align-items: center;
 }
-
-.card{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 20%;
-    height: 50vh;
-    border-radius: 15px;
-    box-shadow: 0 5px 5px 0 #000000;
+.imgSlider{
+    width: 80%;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    color: #FFF;
-    padding: 1%;
-    font-size: 1.2rem;
-    text-shadow: 2px 2px #000;
+    justify-content: center;
 }
-.card:hover{
-    scale: 1.01;
-    box-shadow: 0 10px 8px 0 #000000;
 
+.imgSlider .slide{
+    z-index: 1;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
 }
-.card1{
-    background-image: url('img/baldurs.jpg');
+.imgSlider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
 }
-.card2{
-    background-image: url('img/eldenRing.jpeg');
+.imgSlider .slide img{
+    z-index: 1;
+    width: 100%;
+    height: 70vh;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #000 ;
 }
-.card3{
-    background-image: url('img/itTakesTwo.webp');
+
+.imgSlider .slide .sliderInfo{
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
 }
+.imgSlider .slide .sliderInfo h2{
+    color: #FFF;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.imgSlider .slide .sliderInfo p{
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.imgSlider .navigation{
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+}
+
+.imgSlider .navigation .btn{
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 1px 2px black;
+    cursor: pointer;
+}
+.imgSlider .navigation .btn.active{
+    background: aqua;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+/*#endregion */
+/*#region Footer */
 footer{
     margin-top: 2%;
     height: 6vh;
@@ -149,7 +210,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     background-color: #A3A3A3;
-    width: 100vw;
+    width: 100%;
     color: #FFF;
 }
 
@@ -168,3 +229,4 @@ footer{
     width: 30%;
     gap: 10%;
 }
+/*#endregion */
