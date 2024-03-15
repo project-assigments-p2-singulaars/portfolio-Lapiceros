@@ -9,24 +9,24 @@
 <body>
     <header>
         <nav>
-            <div id="csarContainer">
-                <img id="csarImg" src="img/csar.png" alt="">
+            <div>
+                <img id="logo" src="img/csar.png" alt="logo">
             </div>
             <div class="links">
                 <ul class="sectionsRef">
-                    <li>about</li>
+                    <li><a href="#">about</a></li>
                     <li><a href="#work">work</a></li>
                     <li>portfolio</li>
                     <li>blog</li>
-                    <li>contact</li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </div>
             <div class="iconContainer">
                 <ul>
-                    <li><img class="icon" src="icons/github.png" alt="twitter icon"></li>
-                    <li><img class="icon" src="icons/LinkedIn2.png" alt="linkedin icon"></li>
+                    <li><a href="http://github.com/Lapiceros" target="_blank"><img class="icon" src="icons/github.png" alt="twitter icon" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/juliomerubia/" target="_blank"><img class="icon" src="icons/LinkedIn2.png" alt="linkedin icon"></a></li>
                     <li><img class="icon" src="icons/Twitch.png" alt="twitch icon"></li>
-                    <li><img class="icon" src="icons/Instagram.png" alt="isntagram icon"></li>
+                    <li><a href="http://www.instagram.com/huliatzo/" target="_blank"><img class="icon" src="icons/Instagram.png" alt="isntagram icon"></a></li>
                 </ul>
             </div>
         </nav>
@@ -35,17 +35,23 @@
     <section class="mainHero" id="about">
         <div class="heroInfo">
             <div class="textContainer">
-                <h1 class="heroText">
-                    Junior FrontEnd developer
+                <h1>
+                    FrontEnd developer
                 </h1>
                 <div>
-                    <p class="heroText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex, perspiciatis praesentium voluptates nesciunt nisi nam vel, alias sint facere sed!</p>
-                    <p class="heroText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex, perspiciatis praesentium voluptates nesciunt nisi nam vel, alias sint facere sed!</p>
+                    <p class="heroText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex!</p>
+                    <p class="heroText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ullam, velit nemo a eum beatae voluptatum iure laboriosam ex!</p>
                 </div>
             </div>
-            <div class="webada">
-                <img id="csarHero" src="img/csar.png" alt="csar Image">
+            <div id="arrow">
+                <a href="#contact">
+                    <p>get in touch</p>
+                    <img src="img/Arrow 1.png" alt="arrow" id="arrowImg">
+                </a> 
             </div>
+        </div>
+        <div class="csarContainer">
+            <img id="csarHero" src="img/hero.png" alt="csar Image">
         </div>
         
     </section>
@@ -101,17 +107,35 @@
             </div>
         </div>
     </section>
+    <section class="contact" id="contact">
+        <h1>Get in touch</h1>
+        <form action="#">
+            <div class="formInput">
+                <input type="text"required>
+                <label for="name">name</label>
+            </div>
+            <div class="formInput">
+                <input type="email"required>
+                <label for="email">email</label>
+            </div>
+            <div class="textarea">
+                <label for="">message</label>
+                <textarea required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
     <footer>
         <div id="copyright">
             <img src="icons/copyright.png" alt="copyright">
             <h3>Julio Merubia</h3>
         </div>
         <ul class="footerList">
-            <li>about</li>
-            <li>book</li>
+            <li><a href="#">about</a></li>
+            <li><a href="#work">work</a></li>
             <li>portfolio</li>
             <li>blog</li>
-            <li>content</li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </footer>
     <script src="script.js"></script>

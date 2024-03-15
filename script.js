@@ -2,7 +2,6 @@ const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.btn');
 let currentSlide = 1;
 
-
 const manualNav = function(manual){
     slides.forEach(slide => {
         slide.classList.remove('active');
